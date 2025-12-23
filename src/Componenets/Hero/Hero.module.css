@@ -65,8 +65,8 @@
 }
 
 .Paragraph {
-    font-size: 1.5rem;
-    font-weight: 200;
+    font-size: 1.2rem;
+    font-weight: 100;
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.9s forwards;
@@ -74,8 +74,8 @@
 
 .buttonContainer {
     display: flex;
-    justify-content: space-between;
-    width: 20%;
+    justify-content: center;
+    width: 90%;
     gap: 1rem;
 }
 
