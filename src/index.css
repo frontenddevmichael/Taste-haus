@@ -1,0 +1,143 @@
+/* ==============================
+   TasteHaus v2 - Root Variables
+   Author: Cortex / OCM Devs
+   Purpose: Centralized theme for React project
+   ============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* ---------- Fonts ---------- */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Lato', sans-serif;
+
+  /* ---------- Colors ---------- */
+  /* Primary / Brand */
+  --color-primary: #ba7881;
+  --color-primary-text: #fcfaf8;
+
+  /* Secondary / Dark Elements */
+  --color-secondary: #1f1f1f;
+  --color-secondary-text: #fcfaf8;
+
+  /* Accent / Highlights */
+  --color-accent: #ba7881;
+  --color-accent-text: #fcfaf8;
+
+  /* Base */
+  --color-bg: #fff7ef;
+  --color-text: #1f1f1f;
+
+  /* Card / Surface */
+  --color-card-bg: #fcfaf8;
+  --color-card-text: #1f1f1f;
+
+  /* Popover / Overlay */
+  --color-popover-bg: #fcfaf8;
+  --color-popover-text: #1f1f1f;
+
+  /* Muted / Subtle elements */
+  --color-muted-bg: #edebe9;
+  --color-muted-text: #595959;
+
+  /* Destructive / Alerts */
+  --color-destructive-bg: #ef4444;
+  --color-destructive-text: #f8fafc;
+
+  /* Borders & Inputs */
+  --color-border: #e5e0dc;
+  --color-input-bg: #e5e0dc;
+  --color-focus-ring: #ba7881;
+
+  /* ---------- Spacing ---------- */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+
+  /* ---------- Border Radius ---------- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 24px;
+
+  /* ---------- Shadows ---------- */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+  /* ---------- Transitions ---------- */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-medium: 0.4s ease-in-out;
+  --transition-slow: 0.6s ease-in-out;
+
+  /* ---------- Z-Index Layers ---------- */
+  --z-header: 1000;
+  --z-modal: 1100;
+  --z-tooltip: 1200;
+}
+
+/* ---------- Base Styles ---------- */
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-primary-text);
+  margin: 0;
+}
+
+p {
+  margin: 0 0 var(--space-md) 0;
+  line-height: 1.6;
+  color: var(--color-secondary-text);
+  font-family: var(--font-body);
+}
+
+a {
+  color: var(--color-accent-text);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  font-weight: 300;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background-color: var(--color-primary);
+  color: var(--color-primary-text);
+  border: none;
+  padding: 10px 18px;
+  font-size: 1.2rem;
+  display: flex;
+}
+
+button:hover {
+  background-color: var(--color-accent);
+  color: var(--color-accent-text);
+  border-color: var(--color-focus-ring);
+  transform: translateY(-4px);
+}
+input, textarea {
+  font-family: var(--font-body);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm);
+  transition: border-color var(--transition-fast);
+  background-color: var(--color-input-bg);
+  color: var(--color-text);
+}

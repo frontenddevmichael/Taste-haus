@@ -1,0 +1,303 @@
+.footer {
+    background-color: var(--color-secondary);
+    width: 100%;
+}
+
+.footerTop {
+    border-bottom: 1px solid rgba(252, 250, 248, 0.1);
+    padding: var(--space-xl) var(--space-md);
+}
+
+.footerTopContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+}
+
+.contactInfoItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-sm);
+}
+
+.contactInfoLabel {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    color: var(--color-primary);
+    text-transform: uppercase;
+}
+
+.contactInfoValue {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--color-primary-text);
+    margin: 0;
+}
+
+.footerMain {
+    padding: var(--space-xxl) var(--space-md);
+}
+
+.footerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: var(--space-xxl);
+}
+
+.footerBrand {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.footerLogo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.footerLogo img {
+    height: 40px;
+    width: auto;
+}
+
+.footerLogo h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--color-primary-text);
+    margin: 0;
+}
+
+.footerDescription {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(252, 250, 248, 0.7);
+    margin: 0;
+    max-width: 350px;
+}
+
+.socialLinks {
+    display: flex;
+    gap: var(--space-sm);
+    margin-top: var(--space-sm);
+}
+
+.socialLink {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(252, 250, 248, 0.3);
+    border-radius: var(--radius-sm);
+    color: var(--color-primary-text);
+    transition: all var(--transition-fast);
+}
+
+.socialLink:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+.socialLink svg {
+    width: 18px;
+    height: 18px;
+}
+
+.footerLinks {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.footerLinksTitle {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--color-primary-text);
+    margin: 0;
+}
+
+.footerLinksList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.footerLinksList a {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgba(252, 250, 248, 0.7);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footerLinksList a:hover  {
+    color: var(--color-primary);
+}
+
+.footerNewsletter {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.newsletterDescription {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(252, 250, 248, 0.7);
+    margin: 0;
+}
+
+.newsletterForm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.newsletterInput {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    padding: var(--space-sm) var(--space-md);
+    background-color: rgba(252, 250, 248, 0.1);
+    border: 1px solid rgba(252, 250, 248, 0.2);
+    border-radius: var(--radius-sm);
+    color: var(--color-primary-text);
+    transition: all var(--transition-fast);
+}
+
+.newsletterInput::placeholder {
+    color: rgba(252, 250, 248, 0.5);
+}
+
+.newsletterInput:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background-color: rgba(252, 250, 248, 0.15);
+}
+
+.newsletterButton {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    background-color: var(--color-primary);
+    color: var(--color-primary-text);
+    border: none;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.newsletterButton:hover {
+    background-color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+.footerBottom {
+    border-top: 1px solid rgba(252, 250, 248, 0.1);
+    padding: var(--space-lg) var(--space-md);
+}
+
+.footerBottomContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: rgba(252, 250, 248, 0.6);
+    margin: 0;
+}
+
+.legalLinks {
+    display: flex;
+    gap: var(--space-lg);
+}
+
+.legalLinks a {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: rgba(252, 250, 248, 0.6);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.legalLinks a:hover {
+    color: var(--color-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .footerContainer {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-xl);
+    }
+
+    .footerBrand {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .footerTopContainer {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    .footerMain {
+        padding: var(--space-xl) var(--space-md);
+    }
+
+    .footerContainer {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    .footerBottomContainer {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+    }
+
+    .legalLinks {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .socialLinks {
+        justify-content: center;
+    }
+
+    .footerDescription {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,279 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    box-shadow: none;
+    background-color: rgba(15, 15, 15, 0.585);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(20px);
+}
+
+/* Scrolled State */
+.nav.scrolled {
+    height: 70px;
+    background-color: rgba(15, 15, 15, 0.98);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.navLogo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navLogo img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInDown 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.05s forwards;
+    transition: height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav.scrolled .navLogo img {
+    height: 50px;
+}
+
+.navLogo h1 {
+    font-weight: 300;
+    font-size: 1.5rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInDown 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.15s forwards;
+    transition: font-size 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav.scrolled .navLogo h1 {
+    font-size: 1.3rem;
+}
+
+.navLinks {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.navLinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 300;
+    position: relative;
+    transition: color 0.25s ease, font-size 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.navLinks a:nth-child(1) {
+    animation: fadeInDown 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.25s forwards;
+}
+
+.navLinks a:nth-child(2) {
+    animation: fadeInDown 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.35s forwards;
+}
+
+.navLinks a:nth-child(3) {
+    animation: fadeInDown 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.45s forwards;
+}
+
+.navLinks a:nth-child(4) {
+    animation: fadeInDown 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.55s forwards;
+}
+
+.navLinks a:nth-child(5) {
+    animation: fadeInDown 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.65s forwards;
+}
+
+.nav.scrolled .navLinks a {
+    font-size: 0.85rem;
+}
+
+.navLinks a:hover {
+    color: var(--color-accent);
+}
+
+.navLinks a:hover::after {
+    width: 100%;
+}
+
+.navLinks a:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+}
+
+.orderButton {
+    font-size: 1rem;
+    padding: 10px 24px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInDown 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.75s forwards;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav.scrolled .orderButton {
+    padding: 8px 20px;
+    background-color: var(--color-accent);
+    box-shadow: 0 2px 10px rgba(var(--color-accent-rgb, 255, 107, 107), 0.3);
+}
+
+.orderButton:hover {
+    box-shadow: 0 4px 15px rgba(var(--color-accent-rgb, 255, 107, 107), 0.4);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInDown 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.25s forwards;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.25s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Keyframe Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive - Gradually reduce link size */
+@media (max-width: 1200px) {
+    .navLinks {
+        gap: 20px;
+    }
+
+    .navLinks a {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .navLinks {
+        gap: 15px;
+    }
+
+    .navLinks a {
+        font-size: 0.8rem;
+    }
+
+    .orderButton {
+        font-size: 0.9rem;
+        padding: 8px 18px;
+    }
+}
+
+@media (max-width: 900px) {
+    .navLinks a {
+        font-size: 0.75rem;
+    }
+
+    .navLinks {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        padding: 0 1rem;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navLinks {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        width: 70%;
+        height: calc(100vh - 80px);
+        background-color: rgba(30, 30, 30, 0.98);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 2rem;
+        gap: 2rem;
+        transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .navLinks.open {
+        right: 0;
+    }
+
+    .navLinks a,
+    .orderButton {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .navLinks a {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    .orderButton {
+        width: 100%;
+        padding: 15px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navLogo h1 {
+        font-size: 1.2rem;
+    }
+
+    .navLogo img {
+        height: 50px;
+    }
+}
